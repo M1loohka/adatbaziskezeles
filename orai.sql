@@ -17,4 +17,7 @@ SELECT cim,mufaj FROM `filmek` WHERE mufaj="Sci-fi";
 SELECT cim,ertekeles FROM `filmek` WHERE 1 ORDER BY ertekeles DESC; --vagy ASC 
 --rendezze növekvő sorrendbe kiadás éve alapján
 SELECT cim,kiadas_eve FROM `filmek` WHERE 1 ORDER BY kiadas_eve ASC;
-
+--csak az A betűvel kezdődő filmek
+SELECT cim FROM `filmek` WHERE cim LIKE "A%";
+--a 3 leghosszabb filmet írja ki
+SELECT cim FROM `filmek` WHERE 1 ORDER BY hosszu_perc DESC LIMIT 3;
